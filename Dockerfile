@@ -4,7 +4,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
 RUN apt install --yes git qemu-kvm udev iproute2 busybox-static \
      coreutils python3-requests python3-argcomplete libvirt-clients kbd kmod file rsync zstd virtiofsd \
      gcc-multilib libc6-i386 libc6-dev-i386 libnuma-dev libcap-dev bc flex bison libelf-dev make gcc clang \
-     ethtool libmnl-dev libfuse-dev virtiofsd net-tools libssl-dev uuid-runtime jq python3-jsonschema socat iptables netsniff-ng netperf tcpdump inetutils-ping libcap-ng-dev
+     ethtool libmnl-dev libfuse-dev virtiofsd net-tools libssl-dev uuid-runtime jq python3-jsonschema socat iptables netsniff-ng netperf tcpdump inetutils-ping libcap-ng-dev arping
 RUN git clone --recursive https://github.com/arighi/virtme-ng.git
 RUN echo 'export PATH="$PATH:/virtme-ng"' >> ~/.bashrc
 RUN usermod -a -G kvm root
